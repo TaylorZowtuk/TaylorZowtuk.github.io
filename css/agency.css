@@ -25,6 +25,23 @@ a:hover {
   color: #fed136 !important;
 }
 
+.fa-stack .fa { 
+  color: black;
+}
+
+.fa-stack .fa.fa-circle { 
+  opacity: 0.0;
+  color: #fec503;
+}
+
+.fa-stack:hover .fa.fa-file-pdf { 
+  color: white;
+}
+
+.fa-stack:hover .fa.fa-circle {
+   opacity: 1.0
+}
+
 h1,
 h2,
 h3,
@@ -282,7 +299,7 @@ header.masthead .intro-text .intro-heading {
   margin: 0 auto;
   padding: 25px;
   text-align: center;
-  background-color: #fff;
+  background-color: #f8f9fa;
 }
 
 #portfolio .portfolio-item .portfolio-caption h4 {
