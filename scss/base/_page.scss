@@ -19,6 +19,23 @@ a {
   color: $primary !important;
 }
 
+.fa-stack .fa { 
+  color: $black;
+}
+
+.fa-stack .fa.fa-circle { 
+  opacity: 0.0;
+  color: darken($primary, 10%);
+}
+
+.fa-stack:hover .fa.fa-file-pdf { 
+  color: $white;
+}
+
+.fa-stack:hover .fa.fa-circle {
+   opacity: 1.0
+}
+
 h1,
 h2,
 h3,
