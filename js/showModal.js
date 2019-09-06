@@ -1,7 +1,7 @@
 // https://gist.github.com/MrDys/3512455#gistcomment-2341322
 $(document).ready(function(){
 
-	//Open modal con url
+	//Open modal with url
 	var url      	= window.location.href;
 	var modal_code 	= getParameterByName("modal",url);
 
@@ -16,7 +16,7 @@ $(document).ready(function(){
 	
 }); 
 
-function getParameterByName(name, url) { //Obtiene un value de un query string
+function getParameterByName(name, url) { //Obtain a value from a query string
     if (!url) url = window.location.href;
     name = name.replace(/[\[\]]/g, "\\$&");
     var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
@@ -25,7 +25,7 @@ function getParameterByName(name, url) { //Obtiene un value de un query string
     if (!results[2]) return '';
     return decodeURIComponent(results[2].replace(/\+/g, " "));
 
-    /*EJEMPLO
+    /*EXAMPLE
 	// query string: ?foo=lorem&bar=&baz
 	var foo = getParameterByName('foo'); // "lorem"
 	var bar = getParameterByName('bar'); // "" (present with empty value)
