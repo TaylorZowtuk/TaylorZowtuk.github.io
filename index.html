@@ -159,7 +159,21 @@
           </a>
           <div class="portfolio-caption">
             <h4>Vibes</h4>
-            <p class="text-muted">Java, Android</p>
+            <p class="text-muted">Java & Android</p>
+          </div>
+        </div>
+        <div class="col-md-4 col-sm-6 portfolio-item">
+          <a class="portfolio-link" data-toggle="modal" href="#portfolioModal5">
+            <div class="portfolio-hover">
+              <div class="portfolio-hover-content">
+                <i class="fas fa-plus fa-3x"></i>
+              </div>
+            </div>
+            <img class="img-fluid" src="img/portfolio/GazpreaLogo.png" alt="">
+          </a>
+          <div class="portfolio-caption">
+            <h4>Gazprea Compiler</h4>
+            <p class="text-muted">C++, ANTLR, & Gazprea</p>
           </div>
         </div>
       </div>
@@ -643,11 +657,60 @@
                   One impressive technical accomplishment for this project is that our app updates in real time –
                   meaning that, for example, when someone you follow posts a mood update, you can see it without having
                   to navigate between screens to refresh the app.
-
-
                 </p>
                 <ul class="list-inline">
                   <li>Date: October 2019 - December 2019</li>
+                </ul>
+                <button class="btn btn-primary" data-dismiss="modal" type="button">
+                  <i class="fas fa-times"></i>
+                  Close Project</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal 5 -->
+  <div class="portfolio-modal modal fade" id="portfolioModal5" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="close-modal" data-dismiss="modal">
+          <div class="lr">
+            <div class="rl"></div>
+          </div>
+        </div>
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-8 mx-auto">
+              <div class="modal-body">
+                <!-- Project Details Go Here -->
+                <h2 class="text-uppercase">GAZPREA COMPILER</h2>
+                <p class="item-intro text-muted">Co-developed the compiler for Gazprea - a language originally designed
+                  at the IBM Hardware Acceleration Laboratory in Markham, ON.</p>
+                <p class="item-intro text-muted">At the professor's request this code is not made publicly available but
+                  the language specification can be found <a href="resources/gazprea.pdf"> here
+                  </a>.
+                </p>
+                <img class="img-fluid d-block mx-auto" src="img/portfolio/GazpreaLogo.png" alt="">
+                <p> For the “Compiler Design” course (CMPUT 415) I, along with my team of 3 colleagues, got to build a
+                  compiler from the language specification for Gazprea. For this project we were responsible for
+                  building the entire compiler – all the way from writing the language grammar using ANTLR, to designing
+                  our abstract syntax tree, and finally to targeting the LLVM IR.<br><br>
+                  Gazprea is a procedural language and supports functional programming. The language is statically typed
+                  with Booleans, Characters, Strings, Integers, Reals, Tuples, Intervals, Vectors, and Matrices. It
+                  supports type inference, implicit promotion, explicit casting, and typedefs.<br><br>
+                  My contribution to the project was in designing the compiler passes and implementing the typedef and
+                  type resolution passes. Since types touch nearly every statement and expression in a language, this
+                  was a challenging task. I found that the design of the abstract syntax tree is crucial in avoiding an
+                  explosion of the code required for implementing the type system for a language.<br><br>
+                  From working on this project, I gained a deeper understanding of some of the considerations that go
+                  into making language design choices. In addition, I got firsthand experience in developing the
+                  infrastructure required for language compilation as well as the optimization opportunities that exist.
+                </p>
+                <ul class="list-inline">
+                  <li>Date: October 2020 - December 2020</li>
                 </ul>
                 <button class="btn btn-primary" data-dismiss="modal" type="button">
                   <i class="fas fa-times"></i>
