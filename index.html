@@ -422,8 +422,8 @@
               <div class="modal-body">
                 <!-- Project Details Go Here -->
                 <h2 class="text-uppercase">ALEX</h2>
-                <p class="item-intro text-muted">An upper body exoskeleton written in C++ using Makefile, Arduino, and
-                  ODrive.</p>
+                <p class="item-intro text-muted">An upper body exoskeleton written in Python and C++ using Raspberry Pi,
+                  Arduino, ODrive, IMU, and Brushless DC Motors.</p>
                 <a class="btn btn-primary btn-xl text-uppercase"
                   href="https://github.com/ualbertabiomed/exoskeleton">See the code</a><br><br>
                 <img class="img-fluid d-block mx-auto" src="img/portfolio/01-full.jpg" alt="">
@@ -441,22 +441,29 @@
                   often I had to clearly express technical computing concepts to an audience without any previous
                   exposure to these ideas. I’m proud to say that through my efforts and dedication to the vision of the
                   project I am now the Software Team Lead for our Control and Power Team.<br><br>
-                  The exoskeleton is being written in C++ using an Arduino to integrate an ODrive motor controller that
-                  we use to issue commands to our brushless DC motors. A big issue that we faced early on was the
-                  limitations innate to working with Arduinos. They certainly make learning microcontrollers easy but
-                  things such as the: limited IDE; predefined main, setup, and loop functions; and no code partitioning,
-                  meant we were in for problems in the long term. As such it was my job to find out how to get away from
-                  these restrictions and start writing custom and proper C++. I looked at many options for breaking out
-                  the Arduino compiler and bootloader while weighing which solution would be most flexible, best suit
-                  our needs, and be friendly to both - experienced CS students and newcomers to coding. We landed on the
-                  <a href="https://github.com/sudar/Arduino-Makefile">Arduino Makefile project</a>. Our Makefile would
-                  need to allow our members to get working with the exoskeleton fast and easy regardless of their
-                  operating system and thus would need to support Linux, IOS, and Windows. I noticed issues with the
-                  Arduino Makefile project for Windows and ended up making a pull request to the project to correct
-                  their documentation and make a fix to the Makefile which drives the project (and it was accepted,
-                  yay!). I gained experience working with another products API’s while writing C++ to handle calibration
-                  of the ODrive and position encoder. We are currently working on PID control and gravity compensation
-                  for the exoskeleton in C++ and incorporating all our code into an object-oriented design.<br><br>
+                  The exoskeleton was previously being written exclusively in C++ using an Arduino to integrate an
+                  ODrive motor controller that we use to issue commands to our brushless DC motors. A big issue that we
+                  faced early on was the limitations innate to working with Arduinos. They certainly make learning
+                  microcontrollers easy but things such as the: limited IDE; predefined main, setup, and loop functions;
+                  and no code partitioning, meant we were in for problems in the long term. As such it was my job to
+                  find out how to get away from these restrictions and start writing custom and proper C++. I looked at
+                  many options for breaking out the Arduino compiler and bootloader while weighing which solution would
+                  be most flexible, best suit our needs, and be friendly to both - experienced CS students and newcomers
+                  to coding. We landed on the <a href="https://github.com/sudar/Arduino-Makefile">Arduino Makefile
+                    project</a>. Our Makefile would need to allow our members to get working with the exoskeleton fast
+                  and easy regardless of their operating system and thus would need to support Linux, IOS, and Windows.
+                  I noticed issues with the Arduino Makefile project for Windows and ended up making a pull request to
+                  the project to correct their documentation and make a fix to the Makefile which drives the project
+                  (and it was accepted, yay!). I gained experience working with another products API’s while writing C++
+                  to handle calibration of the ODrive and position encoder.<br><br>
+                  More recently we have moved to developing largely in Python. Our design now uses a Raspberry Pi to
+                  interface with the ODrive. This change allows us to utilize ROS, allowing us to perform processing for
+                  multiple joints in parallel – something that’s important when you want your two exoskeleton arms to
+                  move in sync. The Pi acts as our ROS master and runs discrete code segments as separate processes.
+                  These processes are nodes and they can publish information that a subscriber node may be dependent on.
+                  Some nodes that we have developed are the PID control, gravity compensation, and user movement
+                  monitoring for a joint. The user movement monitoring is handled by and IMU connected to an
+                  Arduino.<br><br>
                   This was my first experience working with microcontrollers, and it provided a nice knowledge base for
                   the work that I did implementing a softcore on a high-end FPGA; which was for a graduate students’
                   project on the effect of offloading select query processing components to an FPGA.
